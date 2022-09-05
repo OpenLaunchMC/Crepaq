@@ -1,0 +1,8 @@
+*.json
+*.lock
+*.md
+*.css
+*.html
+coverage
+*.cjs
+*.mjs
