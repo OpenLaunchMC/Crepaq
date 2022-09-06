@@ -13,5 +13,5 @@
  * Then get the maven repo with this regex
  *      /https?:\/\/maven\.minecraftforge\.net\/net\/minecraftforge\/forge\/(\d\.\d{0,2}\.?\d{0,2}\w{0,})-(\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,})\/forge-\d\.\d{0,2}\.?\d{0,2}\w{0,}\d{0,}-\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,}-?\w{0,}\.(zip|jar)/gi
  * (The Longest Regex we've ever made...)
- * (It nearly caused a Catastrophic Backtracking.)
+ * (It nearly caused a Catastrophic Backtracking when I test it on my own computer.)
  */
