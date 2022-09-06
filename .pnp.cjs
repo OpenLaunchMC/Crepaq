@@ -42,8 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qs", "npm:6.11.0"],\
             ["ts-jest", "virtual:cd871684ca700bce629b364179776043c9ce3d4893d49ab225b61e47249956dcb577060785c7d3a5bdcbfefc26e33392ba8a2c5bd2c224801a6a0f0cbe463574#npm:28.0.8"],\
             ["typedoc", "virtual:cd871684ca700bce629b364179776043c9ce3d4893d49ab225b61e47249956dcb577060785c7d3a5bdcbfefc26e33392ba8a2c5bd2c224801a6a0f0cbe463574#npm:0.23.14"],\
-            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
-            ["yarn", "npm:1.22.19"]\
+            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2126,8 +2125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qs", "npm:6.11.0"],\
             ["ts-jest", "virtual:cd871684ca700bce629b364179776043c9ce3d4893d49ab225b61e47249956dcb577060785c7d3a5bdcbfefc26e33392ba8a2c5bd2c224801a6a0f0cbe463574#npm:28.0.8"],\
             ["typedoc", "virtual:cd871684ca700bce629b364179776043c9ce3d4893d49ab225b61e47249956dcb577060785c7d3a5bdcbfefc26e33392ba8a2c5bd2c224801a6a0f0cbe463574#npm:0.23.14"],\
-            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
-            ["yarn", "npm:1.22.19"]\
+            ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5287,15 +5285,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yargs-parser-npm-21.1.1-8fdc003314-ed2d96a616.zip/node_modules/yargs-parser/",\
           "packageDependencies": [\
             ["yargs-parser", "npm:21.1.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["yarn", [\
-        ["npm:1.22.19", {\
-          "packageLocation": "./.yarn/unplugged/yarn-npm-1.22.19-6ba13b96dc/node_modules/yarn/",\
-          "packageDependencies": [\
-            ["yarn", "npm:1.22.19"]\
           ],\
           "linkType": "HARD"\
         }]\

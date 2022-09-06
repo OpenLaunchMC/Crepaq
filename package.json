@@ -12,13 +12,12 @@
     "express": "^4.18.1",
     "qs": "^6.11.0",
     "typedoc": "^0.23.14",
-    "typescript": "^4.8.2",
-    "yarn": "latest"
+    "typescript": "^4.8.2"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/qs": "^6.9.7",
-    "jest": "latest",
+    "jest": "^29.0.2",
     "prettier": "2.7.1",
     "ts-jest": "^28.0.8"
   },
