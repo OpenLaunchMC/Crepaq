@@ -885,6 +885,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.7.15":
+  version: 18.7.15
+  resolution: "@types/node@npm:18.7.15"
+  checksum: 1435fc7fe44744467a3ba8ace646455be228516530dbb3db64a03cca6abcfdc5ba2e48a3eafc71f25f836d2ca871132361c58a5e760237a53674cb09151147d9
+  languageName: node
+  linkType: hard
+
 "@types/prettier@npm:^2.1.5":
   version: 2.7.0
   resolution: "@types/prettier@npm:2.7.0"
@@ -1500,6 +1507,7 @@ __metadata:
   resolution: "crebit@workspace:."
   dependencies:
     "@types/jest": ^29.0.0
+    "@types/node": ^18.7.15
     "@types/qs": ^6.9.7
     axios: ^0.27.2
     express: ^4.18.1

@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/jest", "npm:29.0.0"],\
+            ["@types/node", "npm:18.7.15"],\
             ["@types/qs", "npm:6.9.7"],\
             ["axios", "npm:0.27.2"],\
             ["express", "npm:4.18.1"],\
@@ -1363,6 +1364,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.7.14"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:18.7.15", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.7.15-3b77ff6bd6-1435fc7fe4.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.7.15"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@types/prettier", [\
@@ -2117,6 +2125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["crebit", "workspace:."],\
             ["@types/jest", "npm:29.0.0"],\
+            ["@types/node", "npm:18.7.15"],\
             ["@types/qs", "npm:6.9.7"],\
             ["axios", "npm:0.27.2"],\
             ["express", "npm:4.18.1"],\
