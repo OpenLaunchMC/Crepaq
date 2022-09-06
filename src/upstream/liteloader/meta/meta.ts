@@ -29,67 +29,83 @@
  *              \/redist\/legacy\/liteloader_(\d\.\d(\.\d{0,2})?)_(\d{0,2})\.zip
  */
 
- import axios, { AxiosResponse } from "axios";
- import { stringify } from "querystring";
- 
- const LiteloaderDlRegex =
-   /(https?:\/\/jenkins\.liteloader\.com\/job\/.{0,}?|https?:\/\/dl\.liteloader\.com\/redist\/.{0,}?)liteloader-installer-(\d\.\d{0,2}(\.\d{0,2})?)-\d{2}-?(\w{0,})?(\.jar|\.exe)/gi;
- const LiteloaderLegacyDlRegex =
-   /\/redist\/legacy\/liteloader_(\d\.\d(\.\d{0,2})?)_(\d{0,2})\.zip/gi;
- 
- export function getLiteloaderMaven() {}
- 
- export function getLiteloaderManifest() {}
- 
- export function getLiteloaderWebpage(): Promise<AxiosResponse<any, any>> {
-   console.log("Start Request Liteloader Download Links");
-   return axios.get("http://www.liteloader.com/download", {
-     headers: {
-       "User-Agent":
-         "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
-     },
-   });
- }
- 
- export function getLiteloaderLegacyWebpage(): Promise<AxiosResponse<any, any>> {
-   console.log("Start Request Liteloader Legacy Download Links");
-   return axios.get("http://dl.liteloader.com/redist/legacy", {
-     headers: {
-       "User-Agent":
-         "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
-     },
-   });
- }
- 
- export function getLiteloaderWebpageMetadata(
-   Response: Promise<AxiosResponse<any, any>>
- ) {
-   Response.then(function (resp) {
-     const data: string = stringify(resp.data);
-     console.log("Get Liteloader Download Webpage : 200 Success");
-     const links: IterableIterator<RegExpMatchArray> =
-       data.matchAll(LiteloaderDlRegex);
-     console.log("Download Links RegExp Match Results:");
-     console.log(links);
-   }).catch(function (err) {
-     console.log("Unable to get liteloader download links");
-     console.log(err);
-   });
- }
- 
- export function getLiteloaderLegacyWebpageMetadata(
-   Response: Promise<AxiosResponse<any, any>>
- ) {
-   Response.then(function (resp) {
-     const data: string = stringify(resp.data);
-     console.log("Get Liteloader Legacy Download Webpage : 200 Success");
-     const links: IterableIterator<RegExpMatchArray> = data.matchAll(
-       LiteloaderLegacyDlRegex
-     );
-     console.log("Legacy Download Links RegExp Match Results:");
-     console.log(links);
-   }).catch(function (err) {
-     console.log("Unable to get liteloader download links");
-     console.log(err);
-   });
- }
+import axios, { AxiosResponse } from "axios";
+import { stringify } from "querystring";
+
+const LiteloaderDlRegex =
+  /(https?:\/\/jenkins\.liteloader\.com\/job\/.{0,}?|https?:\/\/dl\.liteloader\.com\/redist\/.{0,}?)liteloader-installer-(\d\.\d{0,2}\.?\d{0,2})-(\d{2})-?(\w{0,})?(\.jar|\.exe)/gi;
+const LiteloaderLegacyDlRegex =
+  /\/redist\/legacy\/liteloader_(\d\.\d(\.\d{0,2})?)_(\d{0,2})\.zip/gi;
+
+// interface LiteloaderWebpageMetadata {
+//     BaseURL   : string | undefined ,
+//     MCVersion : string | undefined ,
+//     Patch     : string | undefined ,
+//     // If regex is undefined it will be release , all the versions >= 1.7.2 are legacy.
+//     BuildType : string | undefined , //SNAPSHOT , RELEASE or LEGACY 
+//     InstType  : string | undefined , //JAR or EXE
+//     FullURL   : string | undefined ,
+// }
+
+export function getLiteloaderMaven() {}
+
+export function getLiteloaderManifest() {}
+
+export function getLiteloaderWebpage(): Promise<AxiosResponse<any, any>> {
+  console.log("Start Request Liteloader Download Links");
+  return axios.get("http://www.liteloader.com/download", {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
+    },
+  });
+}
+
+export function getLiteloaderLegacyWebpage(): Promise<AxiosResponse<any, any>> {
+  console.log("Start Request Liteloader Legacy Download Links");
+  return axios.get("http://dl.liteloader.com/redist/legacy", {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
+    },
+  });
+}
+
+export function getLiteloaderWebpageMetadata(
+  Response: Promise<AxiosResponse<any, any>>
+) {
+  Response.then(function (resp) {
+    const LinksIter : IterableIterator<RegExpMatchArray> = resp.data.matchAll(LiteloaderDlRegex);
+    // console.log("Download Links RegExp Match Results:");
+    // for (const linkArray of links) {
+    //     console.log(linkArray.toString())
+    // }
+    console.log("Start Transform Links to JSON")
+    console.log(LinksIter)
+    // var LiteloaderWebpageMetadataArr : Array<LiteloaderWebpageMetadata> ;
+    // var IterArrCount : Number = 0 ;
+    // for ( const LinkArr of LinksIter ) {
+    //     console.log()
+    // }
+  }).catch(function (err) {
+    console.log("Unable to get liteloader download links");
+    console.log(err);
+  });
+}
+
+export function getLiteloaderLegacyWebpageMetadata(
+  Response: Promise<AxiosResponse<any, any>>
+) {
+  Response.then(function (resp) {
+    const data: string = stringify(resp.data);
+    console.log("Get Liteloader Legacy Download Webpage : 200 Success");
+    const links: IterableIterator<RegExpMatchArray> = data.matchAll(
+      LiteloaderLegacyDlRegex
+    );
+    console.log("Legacy Download Links RegExp Match Results:");
+    console.log(links);
+  }).catch(function (err) {
+    console.log("Unable to get liteloader download links");
+    console.log(err);
+  });
+}

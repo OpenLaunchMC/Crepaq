@@ -8,19 +8,19 @@
   "description": "The Unpkg for Minecraft",
   "packageManager": "yarn@3.2.3",
   "dependencies": {
-    "@types/jest": "^29.0.0",
     "axios": "^0.27.2",
     "express": "^4.18.1",
     "qs": "^6.11.0",
-    "querystring": "^0.2.1",
-    "ts-jest": "^28.0.8",
     "typedoc": "^0.23.14",
     "typescript": "^4.8.2",
-    "yarn": "^1.22.19"
+    "yarn": "latest"
   },
   "devDependencies": {
-    "jest": "^29.0.2",
-    "prettier": "2.7.1"
+    "@types/jest": "^29.0.0",
+    "@types/qs": "^6.9.7",
+    "jest": "latest",
+    "prettier": "2.7.1",
+    "ts-jest": "^28.0.8"
   },
   "scripts": {
     "prepare": "tsc",
@@ -28,5 +28,10 @@
     "start": "ts-node src/index.ts",
     "test": "jest",
     "lint": "prettier --write ."
+  },
+  "dependenciesMeta": {
+    "ts-jest@28.0.8": {
+      "unplugged": true
+    }
   }
 }

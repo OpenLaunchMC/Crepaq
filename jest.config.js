@@ -87,6 +87,15 @@ module.exports = {
   //   "node"
   // ],
 
+  moduleFileExtensions: ["ts", "tsx", "js"],
+
+  transform: {
+    "\\.(ts|tsx)$":
+      "<rootDir>/.yarn/unplugged/ts-jest-virtual-92d9317d98/node_modules/ts-jest/preprocessor.js",
+  },
+
+  testRegex: "[sS]{0,}.test.(ts|tsx|js)$",
+
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
@@ -100,7 +109,7 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: "ts-jest",
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -159,9 +168,7 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: ["/node_modules/", ".yarn"],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -176,10 +183,13 @@ module.exports = {
   // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "/node_modules/",
-  //   "\\.pnp\\.[^\\/]+$"
-  // ],
+  transformIgnorePatterns: [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    ".yarn",
+    ".vscode",
+    ".github",
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
