@@ -42,14 +42,20 @@ const LiteloaderLegacyDlRegex =
 //     MCVersion : string | undefined ,
 //     Patch     : string | undefined ,
 //     // If regex is undefined it will be release , all the versions >= 1.7.2 are legacy.
-//     BuildType : string | undefined , //SNAPSHOT , RELEASE or LEGACY 
+//     BuildType : string | undefined , //SNAPSHOT , RELEASE or LEGACY
 //     InstType  : string | undefined , //JAR or EXE
 //     FullURL   : string | undefined ,
 // }
 
 export function getLiteloaderMaven() {}
 
-export function getLiteloaderManifest() {}
+export function getLiteloaderManifest() {
+  console.log("Start Request Liteloader Manifest File");
+  axios
+    .get("http://dl.liteloader.com/versions/versions.json")
+    .then(function (resp) {})
+    .catch(function (err) {});
+}
 
 export function getLiteloaderWebpage(): Promise<AxiosResponse<any, any>> {
   console.log("Start Request Liteloader Download Links");
@@ -75,13 +81,14 @@ export function getLiteloaderWebpageMetadata(
   Response: Promise<AxiosResponse<any, any>>
 ) {
   Response.then(function (resp) {
-    const LinksIter : IterableIterator<RegExpMatchArray> = resp.data.matchAll(LiteloaderDlRegex);
+    const LinksIter: IterableIterator<RegExpMatchArray> =
+      resp.data.matchAll(LiteloaderDlRegex);
     // console.log("Download Links RegExp Match Results:");
     // for (const linkArray of links) {
     //     console.log(linkArray.toString())
     // }
-    console.log("Start Transform Links to JSON")
-    console.log(LinksIter)
+    console.log("Start Transform Links to JSON");
+    console.log(LinksIter);
     // var LiteloaderWebpageMetadataArr : Array<LiteloaderWebpageMetadata> ;
     // var IterArrCount : Number = 0 ;
     // for ( const LinkArr of LinksIter ) {
