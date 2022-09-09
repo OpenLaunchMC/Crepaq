@@ -1,4 +1,5 @@
-import * as express from "express";
+import { FastifyRequest, FastifyReply } from "fastify";
 
-var IndexRouter = express.Router();
-export default IndexRouter;
+export default function IndexRouter(req: FastifyRequest, reply: FastifyReply) {
+  // TODO : reply a index of services
+}

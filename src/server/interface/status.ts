@@ -1,11 +1,10 @@
-
 import * as qs from "qs";
 import axios from "axios";
+import { FastifyRequest, FastifyReply } from "fastify";
 
-interface Status {
-    
-}
+interface Status {}
 
-StatusRouter.get("/", (req , res) => {
-
-});
+export default function StatusRouter(
+  req: FastifyRequest,
+  reply: FastifyReply
+) {}

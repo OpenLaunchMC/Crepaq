@@ -11,4 +11,10 @@
  *
  */
 
-export function getOptifineMetadata() {}
+export function getOptifineMetadata() {
+
+}
+
+export function getOptifineLegacyMetadata() {
+    
+}
