@@ -8,7 +8,7 @@
   "description": "The Unpkg for Minecraft",
   "packageManager": "yarn@3.2.3",
   "dependencies": {
-    "@types/jest": "^29.0.0",
+    "@types/jest": "^29.0.1",
     "@types/node": "^18.7.15",
     "@types/qs": "^6.9.7",
     "axios": "^0.27.2",
@@ -18,7 +18,7 @@
     "typescript": "^4.8.2"
   },
   "devDependencies": {
-    "jest": "^29.0.2",
+    "jest": "^29.0.3",
     "prettier": "2.7.1",
     "ts-jest": "^28.0.8"
   },
