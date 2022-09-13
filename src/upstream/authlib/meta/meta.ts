@@ -10,7 +10,7 @@ import axios from "axios";
  * @description : Get Authlib-Injector's Metadata
  * @return : Authlib-Injector's Metadata Encoded as JSON
  */
-export default function getAuthlibMetadata() {
+export default async function getAuthlibMetadata() {
   return axios
     .get("https://api.github.com/repos/yushijinhun/authlib-injector/releases")
     .then((res) => {
@@ -18,7 +18,7 @@ export default function getAuthlibMetadata() {
       return Promise.resolve(res.data);
     })
     .catch((err) => {
-      console.log("Fetch Authlib-Injector Metadata Failed");
+      console.error("Fetch Authlib-Injector Metadata Failed");
       return Promise.reject(err);
     });
 }

@@ -10,7 +10,7 @@ import axios from "axios";
  * @description Fetch Adoptium Metadata
  * @return Adoptium's Metadata Encoded as JSON
  */
-export default function getAdoptiumMetadata() {
+export default async function getAdoptiumMetadata() {
   return axios
     .get("api.adoptium.net/v3/info/available_releases", {
       headers: {
@@ -22,7 +22,7 @@ export default function getAdoptiumMetadata() {
       return Promise.resolve(res.data);
     })
     .catch((err) => {
-      console.log("Fetch Adoptium Metadata Failed");
+      console.error("Fetch Adoptium Metadata Failed");
       return Promise.reject(err);
     });
 }

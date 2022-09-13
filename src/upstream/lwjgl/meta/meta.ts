@@ -40,7 +40,7 @@ export function getLWJGLLegacyMetadata(): any {
       return Promise.resolve(res.data);
     })
     .catch((err) => {
-      console.log("Fetch LWJGL2 Metadata Failed");
+      console.error("Fetch LWJGL2 Metadata Failed");
       return Promise.reject(err);
     });
 }

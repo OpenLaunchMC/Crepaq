@@ -10,11 +10,14 @@
 		"rootDir": "src",
 		"outDir": "lib",
 
+		"allowJs": true,
+		"removeComments": true,
+
 		"strict": true,
 		"alwaysStrict": true,
 		"strictFunctionTypes": true,
-		"strictNullChecks": true,
-		"strictPropertyInitialization": true,
+		"strictNullChecks": false,
+		"strictPropertyInitialization": false,
 
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitAny": true,
@@ -28,6 +31,9 @@
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"declaration": true,
+		"moduleDetection": "auto",
+        "declarationDir": "./dist/types",
+        "emitDeclarationOnly": true,
 
 		"pretty": true
 	},
