@@ -14,9 +14,19 @@ export default function server() {
     maxParamLength: 120,
     querystringParser: (str) => qs.parse(str),
   });
-  App.get("/", IndexRouter(request, reply));
-  App.get("/status", StatusRouter);
-  App.get("/forge", ForgeRouter);
-  App.get("/curseforge", Indev(_, reply));
-  App.get;
+  App.get("/", (req , reply) => {
+    req.
+  });
+  App.get("/status", (req , reply) => {
+    req.
+  });
+  App.get("/forge", (req , reply) => {
+    req.
+  });
+  App.get("/curseforge",(req , reply) => {
+    req.
+  });
+  App.get("/github" , (req , reply) => {
+    reply.
+  });
 }

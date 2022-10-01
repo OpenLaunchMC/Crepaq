@@ -1,5 +1,7 @@
-import { FastifyRequest, FastifyReply } from "fastify";
+export default function getServicesIndexes(){
 
-export default function IndexRouter(req: FastifyRequest, reply: FastifyReply) {
-  // TODO : reply a index of services
+}
+
+export function getServicesAvaliablilities() {
+  
 }
