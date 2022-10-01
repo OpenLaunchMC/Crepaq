@@ -5,7 +5,6 @@
 ---
 
 ##### Crebit CDN is deployed at Cloudflare's Global Network
-##### In the future, Crebit will be deployed on multiple CDNs.
 
 ---
 ### What Functions do we have?
@@ -19,10 +18,13 @@
     > Fabric API  
     > Quilt API  
     > Authlib-Injector  
-    > OpenJDK  
+    > Contigo
+    > Cauldron
+    > Rift
+    > PaperMC
+    > Thermos
     > Adoptium  
     > ZuluJDK  
-    > ZuluJDK JavaFX  
     > LWJGL
     > Minecraft Assets
     > Vanilla Server
