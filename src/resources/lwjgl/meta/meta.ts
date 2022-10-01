@@ -19,6 +19,9 @@ export default function getLWJGLMetadata() {
     .then((res) => {
       console.log("Get LWJGL3 Metadata Success");
       return Promise.resolve(res.data);
+    }).catch((err) => {
+      console.log("Fetch LWJGL2 Metadata Failed");
+      return Promise.reject(err);
     });
 }
 

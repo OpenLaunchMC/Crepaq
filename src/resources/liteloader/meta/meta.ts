@@ -96,7 +96,7 @@ export function getLiteloaderLegacyMetadataFromWebpage() {
     .get("http://dl.liteloader.com/redist/legacy", {
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50",
+          "Crebit/1.0 (ProjectOpenLaunch/Crebit ; dev)",
       },
     })
     .then(function (resp) {
@@ -110,4 +110,10 @@ export function getLiteloaderLegacyMetadataFromWebpage() {
       console.log("Unable to get liteloader download links");
       console.log(err);
     });
+}
+
+function getLiteloaderMetadataFromJenkins() {
+  axios.get(
+    "https://jenkins.liteloader.com/api/json"
+  )
 }

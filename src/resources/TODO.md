@@ -1,0 +1,34 @@
+## TODO List
+##### Crebit Resources Fetcher
+---
+
+- ### Liteloader
+    - ### Code Rewrite!
+- ### Forge
+    - ### Unfinished , Code Rewrite
+- ### Fabric
+    - ### Finished , Annotation & Test Needed
+- ### Optifine
+    - ### Try not to fetch from adloadx
+- ### Papermc
+    - ### Try to fetch from api.papermc.io
+- ### Quilt
+    - ### Unfinished
+- ### Rift
+    - ### Finished , Annotations Needed
+- ### Spigot
+    - ### Annotations
+- ### Sponge
+    - ### Annotations
+- ### Thermos
+    - ### Try to Fetch from https://github.com/CyberdyneCC/Thermos
+- ### Contigo
+    - ### Try to Fetch from https://github.com/djoveryde/Contigo
+- ### ZuluJDK
+    - ### Finished , Annotations
+- ### LWJGL
+    - ### Finished , Test Needed
+- ### Adoptium
+    - ### Finished , Test Needed
+- ### Authlib
+    - ### Finished , Test Needed
