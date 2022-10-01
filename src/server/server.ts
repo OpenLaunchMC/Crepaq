@@ -15,7 +15,7 @@ export default function server() {
     querystringParser: (str) => qs.parse(str),
   });
   App.get("/", (req , reply) => {
-    req.
+    reply.send(fs.readFileSync('./pages/index.html','utf8'))
   });
   App.get("/status", (req , reply) => {
     req.
