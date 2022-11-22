@@ -8,14 +8,14 @@
   "description": "The Unpkg for Minecraft",
   "packageManager": "yarn@3.3.0",
   "dependencies": {
-    "@types/jest": "^29.1.1",
-    "@types/node": "^18.7.15",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
     "@types/qs": "^6.9.7",
-    "axios": "^0.27.2",
-    "fastify": "^4.5.3",
+    "axios": "^1.1.3",
+    "fastify": "^4.10.2",
     "qs": "^6.11.0",
-    "typedoc": "^0.23.14",
-    "typescript": "^4.8.2"
+    "typedoc": "^0.23.21",
+    "typescript": "^4.9.3"
   },
   "devDependencies": {
     "jest": "^29.1.2",
