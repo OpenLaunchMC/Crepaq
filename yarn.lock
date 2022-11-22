@@ -907,10 +907,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.7.15":
+"@types/node@npm:*":
   version: 18.7.22
   resolution: "@types/node@npm:18.7.22"
   checksum: 81016612ad01eee71aa518b9e91c71a54706bbc948c3e9655f80aba75cd4b646cde9b023bf284679c403d6d17b971edc4deec0457421254bbdb78e9773d04804
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.9":
+  version: 18.11.9
+  resolution: "@types/node@npm:18.11.9"
+  checksum: cc0aae109e9b7adefc32eecb838d6fad931663bb06484b5e9cbbbf74865c721b03d16fd8d74ad90e31dbe093d956a7c2c306ba5429ba0c00f3f7505103d7a496
   languageName: node
   linkType: hard
 
@@ -1546,7 +1553,7 @@ __metadata:
   resolution: "crebit@workspace:."
   dependencies:
     "@types/jest": ^29.1.1
-    "@types/node": ^18.7.15
+    "@types/node": ^18.11.9
     "@types/qs": ^6.9.7
     axios: ^0.27.2
     fastify: ^4.5.3
