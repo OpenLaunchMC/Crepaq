@@ -1,14 +1,9 @@
 # Project Crebit
 
-### Crebit is a fast CDN for Minecraft.
+### Crebit is a CDN for Minecraft.
 
 ---
-
-##### Crebit CDN is deployed at Cloudflare's Global Network
-##### In the future, Crebit will be deployed on multiple CDNs.
-
----
-### What Functions do we have?
+### What Functionalities do we have?
 
 #### You can download these things from Crebit:
     > Forge  

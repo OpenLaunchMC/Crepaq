@@ -1,9 +1,0 @@
-export declare function getQuiltInstallerSnapshotMetadataFromMaven(): void;
-export declare function getQuiltLoaderSnapshotMetadataFromMaven(): void;
-export declare function getQuiltQFApiSnapshotMetadataFromMaven(): void;
-export declare function getQuiltQSLSnapshotMetadataFromMaven(): void;
-export declare function getQuiltInstallerReleaseMetadataFromMaven(): void;
-export declare function getQuiltLoaderReleaseMetadataFromMaven(): void;
-export declare function getQuiltQFApiReleaseMetadataFromMaven(): void;
-export declare function getQuiltQSLReleaseMetadataFromMaven(): void;
-export declare function getQuiltQFApiMetadataFromGithub(): void;
