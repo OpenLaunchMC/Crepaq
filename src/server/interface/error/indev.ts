@@ -1,6 +1,7 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 
-export function Indev(req: FastifyRequest, reply: FastifyReply) {
+export function indev(req: FastifyRequest, reply: FastifyReply) {
+  req.log.info("Request from "+req.ip.toString+" not handled because of attack")
   reply.statusCode = 418;
   reply.send(
     "Hi! User from : " +
