@@ -1,21 +1,30 @@
-import * as fs from "fs";
-import * as path from "path";
+//import * as path from "path";
 import fastify from "fastify";
 import * as qs from "qs";
+import ejs from "ejs";
 
-import StatusRouter from "./interface/status";
-import IndexRouter from "./index";
-import { Indev } from "./interface/error/indev";
+// import StatusRouter from "./interface/status";
+// import IndexRouter from "./index";
+// import { Indev } from "./interface/error/indev";
 
 export default function server() {
   const App = fastify({
     ignoreTrailingSlash: true,
     http2: true,
     maxParamLength: 120,
-    querystringParser: (str) => qs.parse(str),
+    querystringParser : (str) => qs.parse(str),
   });
+
+  App.register(require("@fastify/view"), {
+    engine: {
+      ejs: require("ejs"),
+    },
+  });
+
   App.get("/", (req , reply) => {
-    reply.send(fs.readFileSync('./pages/index.html','utf8'))
+    ejs.renderFile("src/server/interface/index.ejs", {}, (err, str) => {
+      reply.send(str);
+    });
   });
   App.get("/status", (req , reply) => {
     req.
@@ -27,6 +36,6 @@ export default function server() {
     req.
   });
   App.get("/github" , (req , reply) => {
-    reply.
+    req.params.
   });
 }

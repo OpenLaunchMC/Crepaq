@@ -1,33 +1,35 @@
-// /**
-//  *
-//  *
-//  *
-//  *  Method 0:
-//  *      http://dl.liteloader.com/versions/versions.json
-//  *      Warning : The links of Liteloaders whose version below mc 1.8 is inaccurate.
-//  *
-//  *  Method 1:
-//  *      Mumfrey's Maven Repo at repo.mumfrey.com
-//  *      https://repo.mumfrey.com/content/repositories/snapshots/com/mumfrey/maven-metadata.xml
-//  *      https://repo.mumfrey.com/content/repositories/public/com/mumfrey/liteloader/maven-metadata.xml
-//  *      Like Jenkins repo , this only contains > 1.8
-//  *
-//  *  Method 2:
-//  *      Liteloader's jenkins repo only contains jars after mc 1.8 version
-//  *      This program will scan liteloader's webpage and generate metadata
-//  *
-//  *      The versions <= mc 1.5.1 are in http://dl.liteloader.com/redist/legacy/
-//  *      hese legacy versions are stored as zip files.
-//  *
-//  *      The versions >= 1.8 are in jenkins.liteloader.com
-//  *      The versions from 1.5.2 to 1.7.10 are in dl.liteloader.com/redist/:version
-//  *
-//  *      The program will scan liteloader.com/download
-//  *      and try to match this regex
-//  *              /(https?:\/\/jenkins\.liteloader\.com\/job\/.{0,}?|https?:\/\/dl\.liteloader\.com\/redist\/.{0,}?)liteloader-installer-(\d\.\d{0,2}(\.\d{0,2})?)-\d{2}-?(\w{0,})?(\.jar|\.exe)/gi
-//  *      Then it will scan dl.liteloader.com/redist/legacy/ with
-//  *              \/redist\/legacy\/liteloader_(\d\.\d(\.\d{0,2})?)_(\d{0,2})\.zip
-//  */
+/**
+ *
+ *
+ *
+ *  Method 0:
+ *      http://dl.liteloader.com/versions/versions.json
+ *      Warning : The links of Liteloaders whose version below mc 1.8 is inaccurate.
+ *
+ *  Method 1:
+ *      Mumfrey's Maven Repo at repo.mumfrey.com
+ *      https://repo.mumfrey.com/content/repositories/snapshots/com/mumfrey/maven-metadata.xml
+ *      https://repo.mumfrey.com/content/repositories/public/com/mumfrey/liteloader/maven-metadata.xml
+ *      Like Jenkins repo , this only contains > 1.8
+ *
+ *  Method 2:
+ *      Liteloader's jenkins repo only contains jars after mc 1.8 version
+ *      This program will scan liteloader's webpage and generate metadata
+ *
+ *      The versions <= mc 1.5.1 are in http://dl.liteloader.com/redist/legacy/
+ *      hese legacy versions are stored as zip files.
+ *
+ *      The versions >= 1.8 are in jenkins.liteloader.com
+ *      The versions from 1.5.2 to 1.7.10 are in dl.liteloader.com/redist/:version
+ *
+ *      The program will scan liteloader.com/download
+ *      and try to match this regex
+ *              /(https?:\/\/jenkins\.liteloader\.com\/job\/.{0,}?|https?:\/\/dl\.liteloader\.com\/redist\/.{0,}?)liteloader-installer-(\d\.\d{0,2}(\.\d{0,2})?)-\d{2}-?(\w{0,})?(\.jar|\.exe)/gi
+ *      Then it will scan dl.liteloader.com/redist/legacy/ with
+ *              \/redist\/legacy\/liteloader_(\d\.\d(\.\d{0,2})?)_(\d{0,2})\.zip
+ *      Method 4:
+ *      Jenkins' REST API
+ */
 
 import axios from "axios";
 import { stringify } from "qs";
@@ -54,8 +56,12 @@ export function getLiteloaderMetadata() {
   console.log("Start Request Liteloader Manifest File");
   axios
     .get("http://dl.liteloader.com/versions/versions.json")
-    .then(function (resp) {})
-    .catch(function (err) {});
+    .then(function (resp) {
+
+    })
+    .catch(function (err) {
+      
+    });
 }
 
 /**
