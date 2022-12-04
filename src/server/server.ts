@@ -1,11 +1,9 @@
 //import * as path from "path";
+//import ejs = require("ejs");
+
 import fastify from "fastify";
 import * as qs from "qs";
-import ejs from "ejs";
-
-// import StatusRouter from "./interface/status";
-// import IndexRouter from "./index";
-// import { Indev } from "./interface/error/indev";
+import * as ejs from "ejs";
 
 export default function server() {
   const App = fastify({
@@ -22,8 +20,13 @@ export default function server() {
   });
 
   App.get("/", (req , reply) => {
-    ejs.renderFile("src/server/interface/index.ejs", {}, (err, str) => {
-      reply.send(str);
+    ejs.renderFile("src/server/pages/index.ejs", {}, (err , str) => {
+      if (err) {
+        App.log.error(err);
+        return;
+      } else {
+        reply.send(str);
+      }
     });
   });
   App.get("/status", (req , reply) => {
@@ -36,6 +39,6 @@ export default function server() {
     req.
   });
   App.get("/github" , (req , reply) => {
-    req.params.
+    req.
   });
 }
