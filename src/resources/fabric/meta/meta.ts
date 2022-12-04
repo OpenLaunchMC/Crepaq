@@ -41,7 +41,9 @@ export function getFabricLoaderMetadata() {
 
 export function getFabricAPIMetadataFromMaven() {
   return axios
-    .get("https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/maven-metadata.xml")
+    .get(
+      "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/maven-metadata.xml"
+    )
     .then((res) => {
       console.log("Fetch Fabric API Metadata Success");
       return Promise.resolve(res.data);
@@ -54,7 +56,9 @@ export function getFabricAPIMetadataFromMaven() {
 
 export function getFabricInstallerMetadataFromMaven() {
   return axios
-    .get("https://maven.fabricmc.net/net/fabricmc/fabric-installer/maven-metadata.xml")
+    .get(
+      "https://maven.fabricmc.net/net/fabricmc/fabric-installer/maven-metadata.xml"
+    )
     .then((res) => {
       console.log("Fetch Fabric API Metadata Success");
       return Promise.resolve(res.data);
@@ -67,7 +71,9 @@ export function getFabricInstallerMetadataFromMaven() {
 
 export function getFabricLoaderMetadataFromMaven() {
   return axios
-    .get("https://maven.fabricmc.net/net/fabricmc/fabric-loader/maven-metadata.xml")
+    .get(
+      "https://maven.fabricmc.net/net/fabricmc/fabric-loader/maven-metadata.xml"
+    )
     .then((res) => {
       console.log("Fetch Fabric Loader Metadata Success");
       return Promise.resolve(res.data);

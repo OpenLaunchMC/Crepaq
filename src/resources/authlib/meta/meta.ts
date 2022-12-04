@@ -8,7 +8,7 @@ import axios from "axios";
  *
  * @name : getAuthlibMetadata
  * @description : Get Authlib-Injector's Metadata
- * @return : Authlib-Injector's Metadata Encoded as JSON
+ * @return : Authlib-Injector's Metadata Encoded as JSON String
  */
 export default function getAuthlibMetadata() {
   return axios

@@ -18,9 +18,11 @@
  *
  */
 
-const ForgeGameVersionRegex : RegExp = /<a.{0,}href=\"index_\d{0,1}\.\d{0,2}\.?\d{0,2}_?p?r?e?\d?\.html\">(\d{0,1}\.\d{0,2}\.?\d{0,2})<\/a>|<li class=\"elem-active\">(\d{0,1}\.\d{0,2}\.?\d{0,2}_?p?r?e?\d?)<\/li>/gi
-const ForgeMavenRepoRegex : RegExp = /https?:\/\/maven\.minecraftforge\.net\/net\/minecraftforge\/forge\/(\d\.\d{0,2}\.?\d{0,2}\w{0,})-(\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,})\/forge-\d\.\d{0,2}\.?\d{0,2}\w{0,}\d{0,}-\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,}-?\w{0,}\.(zip|jar)/gi
+const ForgeGameVersionRegex: RegExp =
+  /<a.{0,}href=\"index_\d{0,1}\.\d{0,2}\.?\d{0,2}_?p?r?e?\d?\.html\">(\d{0,1}\.\d{0,2}\.?\d{0,2})<\/a>|<li class=\"elem-active\">(\d{0,1}\.\d{0,2}\.?\d{0,2}_?p?r?e?\d?)<\/li>/gi;
+const ForgeMavenRepoRegex: RegExp =
+  /https?:\/\/maven\.minecraftforge\.net\/net\/minecraftforge\/forge\/(\d\.\d{0,2}\.?\d{0,2}\w{0,})-(\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,})\/forge-\d\.\d{0,2}\.?\d{0,2}\w{0,}\d{0,}-\d{0,}\.\d{0,}\.\d{0,}\.?\d{0,}-?\w{0,}-?\w{0,}\.(zip|jar)/gi;
 
 export function getForgeInstallerMetadata() {
-    axios.get()
+  axios.get();
 }
