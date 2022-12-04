@@ -38,11 +38,4 @@ export default function server() {
   App.get("/github" , (req , reply) => {
     req.params.
   });
-<<<<<<< HEAD
-=======
-  //App.get("/forge", ForgeRouter);
-  //App.get("/curseforge", Indev(_, reply));
-  App.get("/", async (_, reply) => index(reply));
-  App.get("/status", async (_, reply) => status(reply));
->>>>>>> 60d0a2adc5a75f58bbba2821c3dccfff122e7dbd
 }

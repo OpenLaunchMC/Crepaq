@@ -2,7 +2,7 @@
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true,
-    "**/yarn-*.cjs":true,
+    "**/yarn-*.cjs": true,
     "**/node_modules": true
   },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
