@@ -2395,7 +2395,7 @@ __metadata:
     pino: ^8.7.0
     prettier: 2.7.1
     qs: ^6.11.0
-    rollup: ^3.4.0
+    rollup: ^3.6.0
     ts-jest: ^29.0.2
     ts-node: ^10.9.1
     typedoc: ^0.23.21
@@ -5824,9 +5824,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "rollup@npm:3.4.0"
+"rollup@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "rollup@npm:3.6.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5834,7 +5834,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 6c6cd76a89b44d5798d1e5e15bc9fe3e33177e0c49cc94cf4460252826cc69fec8df9c3c0415578d2b8e173fe8e0c799e943d311a8d0aacc6e57860f058fbbf6
+  checksum: 9aefeddf54623cefdbf9d3f75ac4c3e68f08a4e7f0685ac70c49acbc7963307eb80492c519c76010e15af429d40086ab3b3301add09cb8da892bdf89c605cd52
   languageName: node
   linkType: hard
 
