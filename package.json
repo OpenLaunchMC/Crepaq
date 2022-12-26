@@ -14,12 +14,13 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.1.0",
     "@rollup/plugin-typescript": "^9.0.2",
-    "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.9",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.17",
     "@types/qs": "^6.9.7",
     "axios": "^1.1.3",
     "fastify": "^4.10.2",
     "pino": "^8.7.0",
+    "pnpapi": "^0.0.0",
     "qs": "^6.11.0",
     "typedoc": "^0.23.21",
     "typescript": "^4.9.3"
@@ -48,13 +49,25 @@
     "rollup": "rollup -c"
   },
   "dependenciesMeta": {
+    "commitizen": {
+      "unplugged": true
+    },
+    "conventional-changelog": {
+      "unplugged": true
+    },
+    "conventional-changelog-cli": {
+      "unplugged": true
+    },
+    "cz-conventional-changelog": {
+      "unplugged": true
+    },
     "ts-jest@28.0.8": {
       "unplugged": true
     }
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./.yarn/unplugged/cz-conventional-changelog"
     }
   }
 }
