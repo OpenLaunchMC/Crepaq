@@ -30,19 +30,3 @@ export default async function getZuluMetadata() {
       return Promise.reject(err);
     });
 }
-
-// export async function getZuluJDKMetadata() {
-
-// }
-
-// export async function getZuluJREMetadata() {
-
-// }
-
-// export async function getZuluJDKFXMetadata() {
-
-// }
-
-// export async function getZuluJREFXMetadata() {
-
-// }

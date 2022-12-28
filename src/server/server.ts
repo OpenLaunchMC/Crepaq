@@ -2,7 +2,7 @@
 // import * as path from "path";
 import fastify, { RequestGenericInterface } from "fastify";
 import * as qs from "qs";
-import DownloadGithub from "./proxy/github/github";
+import DownloadGithub from "../proxy/github/github";
 
 interface DlRequestGeneric extends RequestGenericInterface {
   Params: {
