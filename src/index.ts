@@ -1,5 +1,8 @@
-import server from "./server/server";
+var port = process.env.PORT || 8008;
+var is_deamon = process.env.DEAMON || false;
 
-export default async function Start() {
-  await server();
+if (is_deamon) {
+    //var deamon = deamon(port);
+} else {
+    //var server = server(port);
 }

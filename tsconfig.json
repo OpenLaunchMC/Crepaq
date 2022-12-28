@@ -3,12 +3,9 @@
 		"target": "es5",
 		"module": "commonjs",
 		"moduleResolution": "node",
-		"lib": [
-			"es2015"
-		],
 
 		"rootDir": "src",
-		"outDir": "lib",
+		"outDir": "app",
 
 		"allowJs": true,
 		"removeComments": true,

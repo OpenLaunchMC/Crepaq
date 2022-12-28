@@ -1,17 +1,11 @@
-// import * as fs from "fs";
-// import * as path from "path";
-import fastify, { RequestGenericInterface } from "fastify";
-import * as qs from "qs";
-import DownloadGithub from "../proxy/github/github";
-
-interface DlRequestGeneric extends RequestGenericInterface {
-  Params: {
-    DownloadURL: string;
-  };
-}
+import fastify from "fastify";
 
 export default async function Server() {
   const App = fastify({
+    logger: {
+      level: "info",
+      file: "./crebit.log"
+    },
     ignoreTrailingSlash: true,
     maxParamLength: 120,
     querystringParser: (str) => qs.parse(str),
@@ -20,7 +14,7 @@ export default async function Server() {
       transport: {
         target: "pino-pretty",
       },
-      prettyPrint: {
+      prettifier: {
         timestampKey: "time",
       },
       redact: ["req.headers.authorization"],
@@ -72,4 +66,8 @@ export default async function Server() {
     const DownloadContent = await DownloadGithub(req.params.DownloadURL);
     reply.send(DownloadContent);
   });
+  //App.get("/forge", ForgeRouter);
+  //App.get("/curseforge", Indev(_, reply));
+  App.get("/", async (req , reply) => index(req,reply));
+  App.get("/status", async (req , reply) => status(req,reply));
 }
