@@ -3,8 +3,7 @@ import axios from "axios";
 /**
  * Get Adoptium Metadata
  *
- * Metadata is fetch from:
- *      api.adoptium.net/v3/info/avaliable_releases
+ * @source api.adoptium.net/v3/info/avaliable_releases
  *
  * @name getAdoptiumMetadata
  * @description Fetch Adoptium Metadata

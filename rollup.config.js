@@ -14,10 +14,6 @@ const config = {
       file: pkg.es,
       format: "es",
     },
-    {
-      file: pkg.umd,
-      format: "umd",
-    },
   ],
   plugins: [
     resolve(),
