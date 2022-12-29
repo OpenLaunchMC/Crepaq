@@ -12,7 +12,7 @@
   "author": "ProjectOpenLaunch",
   "license": "MIT",
   "description": "The Unpkg for Minecraft",
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@3.3.1",
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-html": "^1.0.1",
@@ -23,7 +23,7 @@
     "@types/jest": "^29.2.4",
     "@types/node": "^18.11.18",
     "@types/qs": "^6.9.7",
-    "axios": "^1.2.1",
+    "axios": "^1.2.2",
     "fastify": "^4.10.2",
     "pino": "^8.8.0",
     "pnpapi": "^0.0.0",

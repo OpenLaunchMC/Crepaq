@@ -5,10 +5,7 @@ import axios from "axios";
 
 /**
  * Get LWJGL3
- *
- * Metadata is fetch from Github Releases
- *      https://api.github.com/repos/LWJGL/lwjgl3/releases
- *
+ * @source : https://api.github.com/repos/LWJGL/lwjgl3/releases
  * @name : getLWJGLMetadata
  * @description : Get LWJGL3 Metadata
  * @return : LWJGL3 Metadata Encoded as JSON
@@ -24,15 +21,12 @@ export default function getLWJGLMetadata() {
 
 /**
  * Get LWJGL2
- *
- * Metadata is fetch from Github Releases
- *      https://api.github.com/repos/LWJGL/lwjgl/releases
- *
+ * @source : https://api.github.com/repos/LWJGL/lwjgl/releases
  * @name : getLWJGLLegacyMetadata
  * @description : Get LWJGL2 Metadata
  * @return : LWJGL2 Metadata Encoded as JSON
  */
-export function getLWJGLLegacyMetadata(): any {
+export function getLWJGL2Metadata(): any {
   return axios
     .get("https://api.github.com/repos/LWJGL/lwjgl/releases")
     .then((res) => {
